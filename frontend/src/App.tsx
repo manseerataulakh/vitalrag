@@ -31,7 +31,7 @@ function VitalChart({ data, dataKey, color, label, unit }: {
             <CartesianGrid strokeDasharray="2 3" stroke="var(--border)" />
             <XAxis dataKey="hour" tick={{ fontSize: 10, fill: "var(--text-3)" }} tickLine={false} axisLine={false} />
             <YAxis tick={{ fontSize: 10, fill: "var(--text-3)" }} tickLine={false} axisLine={false} unit={unit} />
-            <Tooltip contentStyle={TOOLTIP_STYLE} formatter={(v: number) => [`${v}${unit}`, label]} />
+            <Tooltip contentStyle={TOOLTIP_STYLE} formatter={(v) => [`${Number(v)}${unit}`, label]} />
             <Line dataKey={dataKey} stroke={color} dot={false} strokeWidth={1.5} />
           </LineChart>
         </ResponsiveContainer>
