@@ -38,8 +38,11 @@ def answer_question(question: str, snippets: list) -> str:
         "If the notes don't contain enough information, say so.\n\n"
         f"Question: {question}\n\nNotes:\n{joined}"
     )
-    resp = client.models.generate_content(model=MODEL, contents=prompt)
-    return (resp.text or "").strip()
+    try:
+        resp = client.models.generate_content(model=MODEL, contents=prompt)
+        return (resp.text or "").strip()
+    except Exception:
+        return "AI answer is temporarily unavailable (rate limit or API error). Please try again shortly."
 
 if __name__ == "__main__":
     import sys, pandas as pd
