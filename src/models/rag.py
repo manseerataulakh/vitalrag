@@ -1,4 +1,6 @@
 import pandas as pd, numpy as np, faiss, os
+import torch
+torch.set_num_threads(1)
 from sentence_transformers import SentenceTransformer
 
 MODEL_NAME = "all-MiniLM-L6-v2"
