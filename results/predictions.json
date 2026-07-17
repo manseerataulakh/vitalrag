@@ -1,0 +1,197 @@
+{
+  "31269608": {
+    "patient_id": 31269608,
+    "ts_risk": 0.938,
+    "text_risk": 0.7,
+    "fused_risk": 0.855,
+    "summary": "83yo female with cerebral aneurysm, edema, CHF, aphasia, and anemia. ICU stay was 7.7 days.",
+    "evidence": [
+      {
+        "text": "Female patient, age 83, admitted to Neuro Stepdown via SURGICAL SAME DAY ADMISSION from PHYSICIAN REFERRAL. ICU length of stay: 7.7 days. Primary diagnoses: Cerebral aneurysm, nonruptured; Cerebral edema; Acute diastolic (congestive) heart failure; Aphasia; Acute posthemorrhagic anemia. Race: WHITE. Insurance: Other.",
+        "score": 0.34347307682037354
+      }
+    ]
+  },
+  "37509585": {
+    "patient_id": 37509585,
+    "ts_risk": 0.88,
+    "text_risk": 0.2,
+    "fused_risk": 0.642,
+    "summary": "63F, Neuro SICU, 5.5 days LOS. SAH, HTN, HLD, CAD. Admitted from ER.",
+    "evidence": [
+      {
+        "text": "Female patient, age 63, admitted to Neuro Surgical Intensive Care Unit (Neuro SICU) via OBSERVATION ADMIT from EMERGENCY ROOM. ICU length of stay: 5.5 days. Primary diagnoses: Nontraumatic subarachnoid hemorrhage from left posterior communicating artery; Essential (primary) hypertension; Hyperlipidemia, unspecified; Atherosclerotic heart disease of native coronary artery without angina pectoris; Pure hypercholesterolemia. Race: HISPANIC/LATINO - SALVADORAN. Insurance: Other.",
+        "score": 0.30522453784942627
+      }
+    ]
+  },
+  "32554129": {
+    "patient_id": 32554129,
+    "ts_risk": 0.009,
+    "text_risk": 0.3,
+    "fused_risk": 0.111,
+    "summary": "63F with cerebral aneurysm, HTN, hyperlipidemia, and obesity admitted from surgical same-day admission. BMI is 40-44.9.",
+    "evidence": [
+      {
+        "text": "Female patient, age 63, admitted to Neuro Intermediate via SURGICAL SAME DAY ADMISSION from PHYSICIAN REFERRAL. ICU length of stay: 0.9 days. Primary diagnoses: Cerebral aneurysm, nonruptured; Body mass index (BMI) 40.0-44.9, adult; Essential (primary) hypertension; Hyperlipidemia, unspecified; Obesity, unspecified. Race: HISPANIC/LATINO - SALVADORAN. Insurance: Other.",
+        "score": 0.25190767645835876
+      }
+    ]
+  },
+  "31338022": {
+    "patient_id": 31338022,
+    "ts_risk": 0.968,
+    "text_risk": 0.4,
+    "fused_risk": 0.769,
+    "summary": "91yo female in TSICU with LE DVT/thrombosis, respiratory failure, AFib, bladder dysfunction, and COPD. Discharged to home after 3.8 days.",
+    "evidence": [
+      {
+        "text": "Female patient, age 91, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 3.8 days. Primary diagnoses: Acute embolism and thrombosis of deep veins of left upper extremity; Acute and chronic respiratory failure with hypoxia; Paroxysmal atrial fibrillation; Neuromuscular dysfunction of bladder, unspecified; Chronic obstructive pulmonary disease, unspecified. Race: BLACK/AFRICAN AMERICAN. Insurance: Medicare.",
+        "score": 0.3424017131328583
+      }
+    ]
+  },
+  "32145159": {
+    "patient_id": 32145159,
+    "ts_risk": 0.105,
+    "text_risk": 0.214,
+    "fused_risk": 0.143,
+    "summary": "age 56, Trauma SICU (TSICU): Acute pancreatitis; Cystic kidney disease, unspecified; Portal hypertension; Thrombocytopenia, unspecified; Physical res.",
+    "evidence": [
+      {
+        "text": "Male patient, age 56, admitted to Trauma SICU (TSICU) via EW EMER. from PACU. ICU length of stay: 1.0 days. Primary diagnoses: Acute pancreatitis; Cystic kidney disease, unspecified; Portal hypertension; Thrombocytopenia, unspecified; Physical restraints status. Race: WHITE. Insurance: Other.",
+        "score": 0.33577534556388855
+      }
+    ]
+  },
+  "38559363": {
+    "patient_id": 38559363,
+    "ts_risk": 0.063,
+    "text_risk": 0.446,
+    "fused_risk": 0.197,
+    "summary": "age 46, Trauma SICU (TSICU): Other specified sepsis; Acute pancreatitis, unspecified; Severe sepsis with septic shock; Acute kidney failure, unspecif.",
+    "evidence": [
+      {
+        "text": "Female patient, age 46, admitted to Trauma SICU (TSICU) via OBSERVATION ADMIT from EMERGENCY ROOM. ICU length of stay: 1.8 days. Primary diagnoses: Other specified sepsis; Acute pancreatitis, unspecified; Severe sepsis with septic shock; Acute kidney failure, unspecified; Cachexia. Race: BLACK/AFRICAN AMERICAN. Insurance: Other.",
+        "score": 0.3115139603614807
+      }
+    ]
+  },
+  "38540883": {
+    "patient_id": 38540883,
+    "ts_risk": 0.964,
+    "text_risk": 0.557,
+    "fused_risk": 0.822,
+    "summary": "age 74, Trauma SICU (TSICU): Unspecified severe protein-calorie malnutrition; Cardiogenic shock; Acute kidney failure with tubular necrosis; Toxic en.",
+    "evidence": [
+      {
+        "text": "Female patient, age 74, admitted to Trauma SICU (TSICU) via OBSERVATION ADMIT from PHYSICIAN REFERRAL. ICU length of stay: 3.2 days. Primary diagnoses: Unspecified severe protein-calorie malnutrition; Cardiogenic shock; Acute kidney failure with tubular necrosis; Toxic encephalopathy; Acute on chronic combined systolic (congestive) and diastolic (congestive) heart failure. Race: BLACK/AFRICAN AMERICAN. Insurance: Other.",
+        "score": 0.3717779219150543
+      }
+    ]
+  },
+  "30876334": {
+    "patient_id": 30876334,
+    "ts_risk": 0.077,
+    "text_risk": 0.158,
+    "fused_risk": 0.105,
+    "summary": "age 59, Trauma SICU (TSICU): Closed fracture of seven ribs; Traumatic pneumothorax without mention of open wound into thorax; Accidental fall on or f.",
+    "evidence": [
+      {
+        "text": "Female patient, age 59, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 0.8 days. Primary diagnoses: Closed fracture of seven ribs; Traumatic pneumothorax without mention of open wound into thorax; Accidental fall on or from other stairs or steps; Home accidents; Alcohol abuse, unspecified. Race: WHITE. Insurance: Medicare.",
+        "score": 0.32202470302581787
+      }
+    ]
+  },
+  "38333427": {
+    "patient_id": 38333427,
+    "ts_risk": 0.039,
+    "text_risk": 0.316,
+    "fused_risk": 0.136,
+    "summary": "age 79, Trauma SICU (TSICU): Attention to ileostomy; Disruption of wound, unspecified; Delirium due to conditions classified elsewhere; Congestive he.",
+    "evidence": [
+      {
+        "text": "Male patient, age 79, admitted to Trauma SICU (TSICU) via SURGICAL SAME DAY ADMISSION from PHYSICIAN REFERRAL. ICU length of stay: 2.1 days. Primary diagnoses: Attention to ileostomy; Disruption of wound, unspecified; Delirium due to conditions classified elsewhere; Congestive heart failure, unspecified; Pulmonary collapse. Race: WHITE. Insurance: Medicare.",
+        "score": 0.3250887989997864
+      }
+    ]
+  },
+  "37293400": {
+    "patient_id": 37293400,
+    "ts_risk": 0.932,
+    "text_risk": 0.869,
+    "fused_risk": 0.91,
+    "summary": "age 79, Trauma SICU (TSICU): Unspecified septicemia; Acute vascular insufficiency of intestine; Septic shock; Acute kidney failure with lesion of tub.",
+    "evidence": [
+      {
+        "text": "Male patient, age 79, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 13.9 days. Primary diagnoses: Unspecified septicemia; Acute vascular insufficiency of intestine; Septic shock; Acute kidney failure with lesion of tubular necrosis; Paroxysmal ventricular tachycardia. Race: WHITE. Insurance: Medicare.",
+        "score": 0.32612866163253784
+      }
+    ]
+  },
+  "39880770": {
+    "patient_id": 39880770,
+    "ts_risk": 0.936,
+    "text_risk": 0.934,
+    "fused_risk": 0.935,
+    "summary": "age 28, Trauma SICU (TSICU): Unspecified displaced fracture of seventh cervical vertebra, initial encounter for closed fracture; Traumatic hemothorax.",
+    "evidence": [
+      {
+        "text": "Female patient, age 28, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 9.4 days. Primary diagnoses: Unspecified displaced fracture of seventh cervical vertebra, initial encounter for closed fracture; Traumatic hemothorax, initial encounter; Traumatic subarachnoid hemorrhage without loss of consciousness, initial encounter; Acute respiratory failure, unspecified whether with hypoxia or hypercapnia; Concussion and edema of thoracic spinal cord, initial encounter. Race: WHITE - BRAZILIAN. Insurance: Other.",
+        "score": 0.32585036754608154
+      }
+    ]
+  },
+  "38197705": {
+    "patient_id": 38197705,
+    "ts_risk": 0.963,
+    "text_risk": 0.75,
+    "fused_risk": 0.888,
+    "summary": "age 43, Trauma SICU (TSICU): Injury to other intra-abdominal organs without mention of open wound into cavity, peritoneum; Traumatic shock; Injury to.",
+    "evidence": [
+      {
+        "text": "Male patient, age 43, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 15.7 days. Primary diagnoses: Injury to other intra-abdominal organs without mention of open wound into cavity, peritoneum; Traumatic shock; Injury to liver without mention of open wound into cavity, hematoma and contusion; Acute and subacute necrosis of liver; Acute vascular insufficiency of intestine. Race: WHITE. Insurance: Other.",
+        "score": 0.3316587805747986
+      }
+    ]
+  },
+  "35514836": {
+    "patient_id": 35514836,
+    "ts_risk": 0.019,
+    "text_risk": 0.266,
+    "fused_risk": 0.105,
+    "summary": "age 64, Trauma SICU (TSICU): Malignant neoplasm of lower third of esophagus; Acidosis; Barrett's esophagus; Esophageal reflux.",
+    "evidence": [
+      {
+        "text": "Male patient, age 64, admitted to Trauma SICU (TSICU) via SURGICAL SAME DAY ADMISSION from PHYSICIAN REFERRAL. ICU length of stay: 2.0 days. Primary diagnoses: Malignant neoplasm of lower third of esophagus; Acidosis; Barrett's esophagus; Esophageal reflux. Race: WHITE. Insurance: Other.",
+        "score": 0.3094707131385803
+      }
+    ]
+  },
+  "39543480": {
+    "patient_id": 39543480,
+    "ts_risk": 0.963,
+    "text_risk": 0.238,
+    "fused_risk": 0.709,
+    "summary": "age 84, Trauma SICU (TSICU): Closed fracture of intertrochanteric section of neck of femur; Acute kidney failure, unspecified; Intracerebral hemorrha.",
+    "evidence": [
+      {
+        "text": "Male patient, age 84, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 0.8 days. Primary diagnoses: Closed fracture of intertrochanteric section of neck of femur; Acute kidney failure, unspecified; Intracerebral hemorrhage; Encephalopathy, unspecified; Hyperosmolality and/or hypernatremia. Race: PATIENT DECLINED TO ANSWER. Insurance: Medicaid.",
+        "score": 0.32482388615608215
+      }
+    ]
+  },
+  "35446858": {
+    "patient_id": 35446858,
+    "ts_risk": 0.012,
+    "text_risk": 0.376,
+    "fused_risk": 0.139,
+    "summary": "age 83, Trauma SICU (TSICU): Subdural hemorrhage following injury without mention of open intracranial wound, with no loss of consciousness; Closed f.",
+    "evidence": [
+      {
+        "text": "Male patient, age 83, admitted to Trauma SICU (TSICU) via EW EMER. from EMERGENCY ROOM. ICU length of stay: 1.9 days. Primary diagnoses: Subdural hemorrhage following injury without mention of open intracranial wound, with no loss of consciousness; Closed fracture of lumbar vertebra without mention of spinal cord injury; Alcohol withdrawal; Other motor vehicle traffic accident involving collision on the highway injuring driver of motor vehicle other than motorcycle; Street and highway accidents. Race: WHITE. Insurance: Medicare.",
+        "score": 0.3321433663368225
+      }
+    ]
+  }
+}
