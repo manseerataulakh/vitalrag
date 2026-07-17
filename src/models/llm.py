@@ -5,7 +5,7 @@ from google import genai
 load_dotenv()
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-2.5-flash-lite"
 
 def summarize(snippets):
     if not snippets:
@@ -27,6 +27,19 @@ def summarize(snippets):
         return out
     except Exception:
         return {"summary": "Summary unavailable.", "risk_signal": 0.5}
+
+def answer_question(question: str, snippets: list) -> str:
+    if not snippets:
+        return "No relevant notes found for this patient."
+    joined = "\n".join(f"- {s['text']}" for s in snippets)
+    prompt = (
+        "You are assisting ICU clinicians. Answer the following question using ONLY "
+        "the provided nursing note excerpts. Be concise (2-3 sentences). "
+        "If the notes don't contain enough information, say so.\n\n"
+        f"Question: {question}\n\nNotes:\n{joined}"
+    )
+    resp = client.models.generate_content(model=MODEL, contents=prompt)
+    return (resp.text or "").strip()
 
 if __name__ == "__main__":
     import sys, pandas as pd
