@@ -1,0 +1,9 @@
+frontend/
+.venv/
+.git/
+node_modules/
+data/
+*.pyc
+__pycache__/
+notebooks/
+.env
