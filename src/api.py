@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
-from src.models.rag import get_model
+from src.models.rag import embed_texts
 from src.models.llm import answer_question
 
 app = FastAPI(title="VitalRAG API")
@@ -49,9 +49,8 @@ def ask(pid: int, q: str = Query(..., min_length=1)):
     if len(pnotes) == 0:
         return {"answer": "No notes available for this patient.", "evidence": []}
 
-    model = get_model()
-    q_emb = model.encode([q], normalize_embeddings=True).astype("float32")
-    n_emb = model.encode(pnotes["text"].tolist(), normalize_embeddings=True).astype("float32")
+    q_emb = embed_texts([q], "RETRIEVAL_QUERY")
+    n_emb = embed_texts(pnotes["text"].tolist(), "RETRIEVAL_DOCUMENT")
     sims = (n_emb @ q_emb.T).ravel()
     order = np.argsort(-sims)[:3]
     evidence = [{"text": str(pnotes.text.iloc[i]), "score": float(sims[i])} for i in order]

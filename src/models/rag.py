@@ -1,28 +1,24 @@
 import pandas as pd, numpy as np, faiss, os
+from google.genai import types
+from src.models.llm import client
 
-MODEL_NAME = "all-MiniLM-L6-v2"
+EMBED_MODEL = "gemini-embedding-001"
 QUERY = "signs of clinical deterioration, distress, or worsening condition"
 
-# load torch/sentence-transformers lazily, only when a request actually
-# needs the model - importing them eagerly at module load time (which
-# happens on every app startup via api.py) kept the process near the
-# 512MB Render free-tier ceiling even for requests that never touch /ask.
-_model = None
-def get_model():
-    global _model
-    if _model is None:
-        import torch
-        torch.set_num_threads(1)
-        from sentence_transformers import SentenceTransformer
-        _model = SentenceTransformer(MODEL_NAME)
-    return _model
+def embed_texts(texts: list[str], task_type: str) -> np.ndarray:
+    """Embed via the Gemini API (task_type: RETRIEVAL_QUERY or RETRIEVAL_DOCUMENT)."""
+    resp = client.models.embed_content(
+        model=EMBED_MODEL,
+        contents=texts,
+        config=types.EmbedContentConfig(task_type=task_type),
+    )
+    return np.array([e.values for e in resp.embeddings], dtype="float32")
 
 def build_index():
     notes = pd.read_csv("data/notes.csv")
-    model = get_model()
-    emb = model.encode(notes["text"].tolist(), normalize_embeddings=True)
+    emb = embed_texts(notes["text"].tolist(), "RETRIEVAL_DOCUMENT")
     index = faiss.IndexFlatIP(emb.shape[1])
-    index.add(emb.astype("float32"))
+    index.add(emb)
     os.makedirs("results", exist_ok=True)
     faiss.write_index(index, "results/notes.index")
     notes.to_parquet("results/notes.parquet")
@@ -33,9 +29,8 @@ def retrieve(patient_id, k=3):
     pnotes = notes[notes.patient_id == patient_id].reset_index(drop=True)
     if len(pnotes) == 0:
         return []
-    model = get_model()
-    q = model.encode([QUERY], normalize_embeddings=True).astype("float32")
-    emb = model.encode(pnotes["text"].tolist(), normalize_embeddings=True).astype("float32")
+    q = embed_texts([QUERY], "RETRIEVAL_QUERY")
+    emb = embed_texts(pnotes["text"].tolist(), "RETRIEVAL_DOCUMENT")
     sims = (emb @ q.T).ravel()
     order = np.argsort(-sims)[:k]
     return [{"text": str(pnotes.text.iloc[i]), "score": float(sims[i])} for i in order]

@@ -1,13 +1,3 @@
----
-title: VitalRAG API
-emoji: 🏥
-colorFrom: blue
-colorTo: purple
-sdk: docker
-app_port: 7860
-pinned: false
----
-
 # VitalRAG — ICU Deterioration Dashboard
 
 A clinical decision-support prototype that combines time-series vital signs analysis with retrieval-augmented generation (RAG) over real MIMIC-IV clinical notes to predict ICU patient deterioration risk.

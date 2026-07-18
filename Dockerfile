@@ -16,6 +16,6 @@ ENV OMP_NUM_THREADS=1
 ENV MKL_NUM_THREADS=1
 ENV TOKENIZERS_PARALLELISM=false
 
-EXPOSE 7860
+EXPOSE 8080
 
-CMD ["uvicorn", "src.api:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD exec uvicorn src.api:app --host 0.0.0.0 --port ${PORT:-8080}
