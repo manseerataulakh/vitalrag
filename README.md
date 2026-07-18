@@ -13,7 +13,7 @@ VitalRAG fuses two independent risk signals:
 | Signal | Source | Model |
 |--------|--------|-------|
 | **Time-series risk** | Hourly ICU vitals (HR, SBP, SpO₂, RR) | Gradient Boosting Classifier with NEWS2 score, shock index, and vital crossing features |
-| **Notes risk** | Real MIMIC-IV ICD diagnoses + demographics | RAG retrieval (FAISS + sentence-transformers) + Gemini summarisation |
+| **Notes risk** | Real MIMIC-IV ICD diagnoses + demographics | RAG retrieval (FAISS + Gemini embeddings) + Gemini summarisation |
 
 The two scores are fused as `0.65 × ts_risk + 0.35 × text_risk`.
 
@@ -35,7 +35,7 @@ The two scores are fused as `0.65 × ts_risk + 0.35 × text_risk`.
 |-------|------------|
 | Frontend | React 19 + TypeScript + Vite + Recharts |
 | Backend | FastAPI + Uvicorn |
-| Embeddings | `sentence-transformers/all-MiniLM-L6-v2` |
+| Embeddings | Gemini `gemini-embedding-001` |
 | Vector search | FAISS (flat inner-product) |
 | LLM | Gemini 2.5 Flash Lite |
 | ML model | scikit-learn GradientBoostingClassifier |
